@@ -9,3 +9,7 @@ $(function(){
   }
   $('#hero-text').animate({opacity:1});
 });
+
+$('.mtoggle').click(function(){
+  $('.modal').toggleClass('is-active');
+});

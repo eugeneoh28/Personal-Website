@@ -2,8 +2,8 @@
 <section class="hero is-primary is-large">
   <div class="hero-body">
     <div id="hero-text" class="container has-text-centered">
-      <h1 class="title is-size-1">Hi There! I'm Eugene.</h1>
-        <h1 class="is-size-2">I like making things and helping others.</h1>
+      <h1 class="title is-size-2">Hi There! I'm Eugene.</h1>
+        <h1 class="is-size-3">I like making things and helping others.</h1>
     </div>
   </div>
 </section>
@@ -29,7 +29,7 @@
     <div class="content has-text-centered">
       <div class="columns is-centered">
         <div class="column is-half">
-          <h1 class="is-size-2">My passions</h1>
+          <h1 class="is-size-2">My Passion</h1>
         </div>
       </div>
       <div class="columns is-centered">
@@ -60,13 +60,27 @@
 </section>
 <hr>
 <section class="section">
-
+  <div class="container">
+    <div class="content has-text-centered">
+      <div class="columns is-centered">
+        <div class="column is-half">
+          <h1 class="is-size-2">Lets Connect!</h1>
+            <p>
+              I'm currently looking for internship opportunities and  <br>
+              am available for freelance work. If you have a project <br>
+              you want to start or want to connect, lets get in touch.
+            </p>
+          <a class="button is-outlined" href="mailto:eo28@cs.washington.edu">Message Me</a>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 <footer class="footer">
   <div class="container">
     <div class="content has-text-centered">
       <p>
-        <a class="icon is-medium" href="https://github.com/eugeneoh28">
+        <a class="icon is-medium" href="https://github.com/eugeneoh28" target="_blank">
           <i class="fa fa-github-alt"></i>
         </a>
       </p>
@@ -74,4 +88,19 @@
     </div>
   </div>
 </footer>
+<div class="modal">
+  <div class="modal-background mtoggle"></div>
+  <div class="modal-card">
+    <header class="modal-card-head">
+      <p class="modal-card-title">Resume</p>
+    </header>
+    <section class="modal-card-body">
+      <img id="resume" src="resources/resume.jpg" alt="Resume">
+    </section>
+    <footer class="modal-card-foot">
+      <a class="button is-success" href="/resources/resume.pdf" download>Download Resume</a>
+      <a class="button mtoggle">Exit</a>
+    </footer>
+  </div>
+</div>
 <% include ./partials/footer %>
