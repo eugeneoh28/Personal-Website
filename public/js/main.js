@@ -13,3 +13,13 @@ $(function(){
 $('.mtoggle').click(function(){
   $('.modal').toggleClass('is-active');
 });
+
+$(document).ready(function(){
+  $('.tab-links a').on('click', function(e){
+    var currAttr = $(this).attr('href');
+    alert(currAttr)
+    $('.tabs' + currAttr).show().siblings().hide();
+    $(this).parent('li').addClass('active').siblings().removeClass('active')
+    e.preventDefault();
+  });
+});
