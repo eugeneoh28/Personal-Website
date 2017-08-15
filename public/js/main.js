@@ -7,18 +7,5 @@ $(function(){
       $($(this).data('target')).toggleClass('is-active');
     });
   }
-  $('#hero-text').animate({opacity:1});
-});
-
-$('.mtoggle').click(function(){
-  $('.modal').toggleClass('is-active');
-});
-
-$(document).ready(function(){
-  $('.tab-links a').on('click', function(e){
-    var currAttr = $(this).attr('href');
-    $('.tab ' + currAttr).show().siblings().hide();
-    $(this).parent('li').addClass('is-active').siblings().removeClass('is-active')
-    e.preventDefault();
-  });
+  $('.hero-text').animate({opacity:1});
 });
