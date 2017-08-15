@@ -1,3 +1,5 @@
+
+
 $(document).ready(function() {
   $(window).scroll( function(){
     $('.intro-section').each( function(i){
@@ -10,3 +12,6 @@ $(document).ready(function() {
     });
   });
 });
+setInterval(function(){
+  $('.blink').delay(600).fadeTo(600, 1).delay(600).fadeTo(600, 0.1);
+}, 500);
