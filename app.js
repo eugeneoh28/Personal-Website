@@ -15,6 +15,14 @@ app.get("/work", function(req, res) {
   res.render("work");
 });
 
+app.get("/13things", function(req, res) {
+  res.render("13things");
+});
+
+app.get("/contact", function(req, res) {
+  res.render("contact");
+});
+
 app.get("/*", function(req, res) {
   res.redirect("/");
 })
