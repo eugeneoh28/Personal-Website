@@ -1,5 +1,3 @@
-
-
 $(document).ready(function() {
   $(window).scroll( function(){
     $('.intro-section').each( function(i){
