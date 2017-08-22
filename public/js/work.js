@@ -1,5 +1,4 @@
 $(document).ready(function(){
-  $('.hidden').css('opacity', '1');
   $('.tab-links a').on('click', function(e){
     var currAttr = $(this).attr('href');
 

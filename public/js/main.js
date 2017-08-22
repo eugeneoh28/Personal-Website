@@ -1,9 +1,10 @@
 $(document).ready(function() {
+  $('.hidden').css('opacity', '1');
   var navBurgers = Array.prototype.slice.call($('.navbar-burger'), 0);
 
   if(navBurgers.length > 0) {
     $('.navbar-burger').click(function(){
-      $(this).slideToggle();
+      $(this).toggleClass('is-active');
       $($(this).data('target')).slideToggle();
     });
   }

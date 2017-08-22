@@ -9,11 +9,8 @@ body.fade-out {
 hr {
   border:black;
 }
-.intro-text {opacity:0;}
-.intro-section {opacity:0;}
-.title {
-  color:white;
-}
+/******************** Overall  *************************************/
+/* Navbar */
 .navbar {
   margin: auto;
   width:75vw;
@@ -28,18 +25,75 @@ hr {
 .navbar-burger span {
   background-color:white;
 }
-.nav a {
-  color:white;
-}
 .nav a:hover {
   background-color:#494949;
   color:white;
 }
+.nav a { color:white; }
+.hidden{
+  opacity:0;
+  transition: .8s;
+}
+/* Background */
+.background {
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+/* Title for pages */
+.title { color:white; }
+.container { max-width:75vw; }
 
+/******************** Home Page ************************************/
 .blink {
   margin:2vh;
   opacity:0.1;
 }
+.home-descrip {
+  margin:auto;
+  text-align: center;
+}
+#home-text {
+  text-align:center;
+  margin-top:25vh;
+
+}
+#hello{
+  height:15%;
+  width:20%;
+  min-height: 200px;
+  min-width: 200px;
+}
+#rocket {
+  height:25%;
+  width:15%;
+  min-height: 225px;
+  min-width: 200px;
+}
+#homesplash {
+  background-image:url('/resources/img/space.svg');
+}
+@media screen and (min-width: 0px) {
+  #home-text h1 {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  #home-text p {
+    font-size: 1.2rem;
+  }
+}
+@media screen and (min-width:961px) {
+  .home-descrip {width:75%;}
+  #home-text h1 {
+    font-size: 2.8rem;
+    font-weight: bold;
+  }
+  #home-text p {
+    font-size: 1.5rem;
+  }
+}
+
+/************************ Work Page ******************************/
 .project-container {
   display:flex;
   flex-wrap: wrap;
@@ -72,105 +126,45 @@ hr {
   margin:auto;
   background-size: contain;
   background-repeat: no-repeat;
-  background-image:url('/resources/img/twitter-bird.svg');
 }
 .project-text {
   margin: 40% auto;
 }
-.home-descrip {
-  margin:auto;
-  text-align: center;
+#work {
+  background-image: url('/resources/img/space2.svg');
 }
-
-.tab { display:none; }
-.tab.active { display:block; }
-
-.text {
-  width:50%;
-  margin:auto;
-}
-
-.container {
-  max-width:75vw;
-}
-
-.hidden{
-  opacity:0;
-  transition: .8s;
-}
-
-.footer { margin-top:5vh }
-@media screen and (min-device-width: 0px) {
+@media screen and (min-width: 0px) {
   .project-item {
     width:60vw;
     height:50vw;
   }
 }
-@media screen and (min-device-width:961px) {
+@media screen and (min-width:961px) {
   .project-item {
     width:40%;
     height:25vw;
   }
-  .home-descrip {
-    width:80%;
-  }
 }
 
+/********************* Project Details ****************************/
+.text {
+  margin:auto;
+}
 .modal-content {
   height:60vh;
   width: 50vw;
 }
-
-
-
-#home-text {
-  text-align:center;
-  color:white;
-  margin-top:25vh;
-
-}
-#home-text h1 {
-  font-size: 2.8rem;
-  font-weight: bold;
-}
-#home-text p {
-  font-size: 1.5rem;
-}
-
-#hello{
-  height:15%;
-  width:20%;
-}
-#rocket {
-  height:20%;
-  width:15%;
-}
-
-#resume {
-  width:100%;
-  height:100%;
-}
-
-#homesplash {
-  background-image:url('/resources/img/space.svg');
-  background-size:cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-#work {
-  background-image: url('/resources/img/space2.svg');
-  background-repeat:no-repeat;
-  background-size:cover;
-  background-position: center;
-}
-
-#about {
-  background-image:url('/resources/img/space3.svg');
-  background-size:cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
 #twit-project {
   background-image:('/resources/img/twitter-bird.svg');
+}
+@media screen and (min-width: 0px) {
+  .text {width:80%;}
+}
+@media screen and (min-width:961px) {
+  .text {width:50%;}
+}
+
+/********************* About Page **********************************/
+#about {
+  background-image:url('/resources/img/space3.svg');
 }
