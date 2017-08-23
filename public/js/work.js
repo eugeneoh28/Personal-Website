@@ -8,3 +8,12 @@ $(document).ready(function(){
     e.preventDefault();
   });
 });
+
+$('project-item').hover(
+  function(){
+      $('.project-text').fadeIn();
+  },
+  function(){
+      $('project-text').fadeOut();
+  }
+);

@@ -34,15 +34,32 @@ hr {
   opacity:0;
   transition: .8s;
 }
+.footer {
+  background-color:#4A7180;
+  background-image: url('/resources/img/footerspace.svg');
+}
+.footer p {
+  color:white;
+}
+.footer a {
+  color:white;
+}
 /* Background */
 .background {
   background-size:cover;
   background-repeat: no-repeat;
   background-position: center;
 }
+.title {
+  color:white;
+  text-shadow: 0 1.5px 2px grey;
+}
 /* Title for pages */
-.title { color:white; }
 .container { max-width:75vw; }
+.is-active a {
+  color:#426572;
+  border-bottom-color: #426572;
+}
 
 /******************** Home Page ************************************/
 .blink {
@@ -74,6 +91,7 @@ hr {
   background-image:url('/resources/img/space.svg');
 }
 @media screen and (min-width: 0px) {
+  .home-descrip {width:90%;}
   #home-text h1 {
     font-size: 2rem;
     font-weight: bold;
@@ -83,7 +101,7 @@ hr {
   }
 }
 @media screen and (min-width:961px) {
-  .home-descrip {width:75%;}
+  .home-descrip {width:85%;}
   #home-text h1 {
     font-size: 2.8rem;
     font-weight: bold;
@@ -103,10 +121,12 @@ hr {
 .project-item {
   background-size:cover;
   box-shadow: 0 15px 25px lightgrey;
+  border: 0.5px solid lightgrey;
   margin:25px;
   border-radius: 5px;
   opacity:1;
-  transition: 0.5s box-shadow;
+  transition: 0.4s;
+  color:transparent;
 
   display:flex;
   justify-content: center;
@@ -130,8 +150,14 @@ hr {
 .project-text {
   margin: 40% auto;
 }
+.tab {
+  padding-bottom: 3vh;
+}
 #work {
   background-image: url('/resources/img/space2.svg');
+}
+#tabservice {
+  display:none;
 }
 @media screen and (min-width: 0px) {
   .project-item {
@@ -144,6 +170,21 @@ hr {
     width:40%;
     height:25vw;
   }
+}
+.p1 {
+  background-color: #F9687F;
+}
+.p2 {
+  background-color: #3DBED4;
+}
+.p3 {
+  background-color: #6F858D;
+}
+.p4 {
+  background-color: #60A46E;
+}
+.p5 {
+  background-color: #F2F7F6;
 }
 
 /********************* Project Details ****************************/
