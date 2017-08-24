@@ -16,8 +16,8 @@ setInterval(function(){
 }, 500);
 
 $('#technicalproj').click(function(){
-  sessionStorage.setItem("work", "tabtechnical");
+  sessionStorage.setItem("work", "technical");
 })
 $('#serviceproj').click(function(){
-  sessionStorage.setItem("work", "tabservice");
+  sessionStorage.setItem("work", "service");
 })

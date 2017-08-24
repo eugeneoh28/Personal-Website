@@ -69,6 +69,7 @@ hr {
   border-bottom-color: #426572;
 }
 
+
 /******************** Home Page ************************************/
 .blink {
   margin:2vh;
@@ -164,7 +165,7 @@ hr {
 #work {
   background-image: url('/resources/img/space2.svg');
 }
-#tabservice {
+#service {
   display:none;
 }
 @media screen and (min-width: 0px) {
