@@ -1,4 +1,5 @@
 $(document).ready(function(){
+  alert(sessionStorage.getItem("work"))
   $('.tab-links a').on('click', function(e){
     var currAttr = $(this).attr('href');
 

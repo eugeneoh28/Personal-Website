@@ -8,7 +8,7 @@ $(document).ready(function() {
       $($(this).data('target')).slideToggle();
     });
   }
-  $('.intro-text').animate({opacity:1}, 600);
+  $('.hidden').animate({opacity:1}, 600);
 
 });
 

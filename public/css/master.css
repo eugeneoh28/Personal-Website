@@ -32,7 +32,7 @@ hr {
 .nav a { color:white; }
 .hidden{
   opacity:0;
-  transition: .8s;
+  transition: 0.2s;
 }
 .footer {
   background-color:#4A7180;
@@ -43,6 +43,14 @@ hr {
 }
 .footer a {
   color:white;
+}
+.intro-section {
+  opacity:0;
+}
+@media screen and (max-width:1008px) {
+  .navbar {
+    width:90vw;
+  }
 }
 /* Background */
 .background {
@@ -84,7 +92,7 @@ hr {
 #rocket {
   height:25%;
   width:15%;
-  min-height: 225px;
+  min-height: 200px;
   min-width: 200px;
 }
 #homesplash {
@@ -123,7 +131,7 @@ hr {
   box-shadow: 0 15px 25px lightgrey;
   border: 0.5px solid lightgrey;
   margin:25px;
-  border-radius: 5px;
+  border-radius: 13px;
   opacity:1;
   transition: 0.4s;
   color:transparent;
@@ -188,6 +196,12 @@ hr {
 }
 
 /********************* Project Details ****************************/
+.project-details {
+  background-image: url('/resources/img/footerspace.svg');
+}
+.project-desc a {
+  color:#426572;
+}
 .text {
   margin:auto;
 }
@@ -195,6 +209,7 @@ hr {
   height:60vh;
   width: 50vw;
 }
+
 #twit-project {
   background-image:('/resources/img/twitter-bird.svg');
 }
