@@ -1,5 +1,6 @@
 body {
     opacity: 1;
+    font-family: 'Montserrat', sans-serif;
     transition: 1s opacity;
 }
 body.fade-out {
@@ -25,11 +26,61 @@ hr {
 .navbar-burger span {
   background-color:white;
 }
-.nav a:hover {
-  background-color:#494949;
+.nav a {
   color:white;
 }
-.nav a { color:white; }
+.nav a:hover {
+  color:black;
+}
+.navbar-burger.is-active span {
+  background-color: white;
+}
+.navbar-burger.is-active a {
+  color: white;
+}
+
+/****** active-nav**/
+@media screen and (max-width: 1007px) {
+  .navbar-burger {
+    padding: 2rem 1rem;
+  }
+  .navbar-menu.active-nav {
+      display: block;
+      visibility: visible;
+      opacity: 1;
+      background-color: #314B54;
+      transition: 300ms ease-in;
+      -webkit-transition: 300ms;
+      -moz-transition: 300ms;
+  }
+  .navbar-menu {
+    display:block;
+    visibility: hidden;
+    opacity: 0;
+    transition: 300ms ease-out;
+    -webkit-transition: 300ms;
+    -moz-transition: 300ms;
+  }
+}
+
+/******* topbar ****/
+.navbar-menu.topmenu {
+  background-color: white;
+}
+.navbar-burger.topburger span {
+  background-color: black;
+}
+.nav.topbar {
+  background-color: white;
+  box-shadow: 0 1.5px 1.5px lightgrey;
+}
+.nav.topbar a {
+  color:black;
+}
+ .nav.topbar span {
+   color:black;
+ }
+/*******************/
 .hidden{
   opacity:0;
   transition: 0.2s;
@@ -60,15 +111,13 @@ hr {
 }
 .title {
   color:white;
-  text-shadow: 0 1.5px 2px grey;
 }
 /* Title for pages */
 .container { max-width:75vw; }
-.is-active a {
-  color:#426572;
-  border-bottom-color: #426572;
+.activelink a {
+  color:#1BB2CC;
+  border-bottom-color: #1BB2CC;
 }
-
 
 /******************** Home Page ************************************/
 .blink {
@@ -201,7 +250,7 @@ hr {
   background-image: url('/resources/img/footerspace.svg');
 }
 .project-desc a {
-  color:#426572;
+  color:#;
 }
 .text {
   margin:auto;

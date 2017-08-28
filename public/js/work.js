@@ -1,10 +1,10 @@
 $(document).ready(function(){
   var loadTab = sessionStorage.getItem("work");
-  if (loadTab == "technical") {
-    $('#titletechnical').addClass('is-active');
+  if (loadTab == null || loadTab == "technical") {
+    $('#titletechnical').addClass('activelink');
     $('#technical').fadeIn(800).siblings().hide().fadeOut(800)
-  } else if (loadTab != null ) {
-    $('#titleservice').addClass('is-active');
+  } else{
+    $('#titleservice').addClass('activelink');
     $('#service').fadeIn(800).siblings().hide().fadeOut(800)
   }
 
@@ -13,7 +13,7 @@ $(document).ready(function(){
 
     $('.tab'+currAttr).fadeIn(800).siblings().hide().fadeOut(800)
 
-    $(this).parent('li').addClass('is-active').siblings().removeClass('is-active')
+    $(this).parent('li').addClass('activelink').siblings().removeClass('activelink')
     e.preventDefault();
   });
 });

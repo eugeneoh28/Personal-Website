@@ -14,33 +14,40 @@
       <div class="content">
         <div class="text">
             <h1 class="title">Overview</h1>
-            <p><strong>Timeline:</strong> August 2017 - Present</p>
-            <p><strong>Project Type:</strong> Personal Project</p>
-            <p><strong>Github Link:</strong> <a href="https://github.com/eugeneoh28/Personal-Website">Personal Website</a></p>
+            <p><strong>Timeline:</strong> June 2017</p>
+            <p><strong>Project Type:</strong>Research Project</p>
+            <p><strong>Github Link:</strong>
+              <a href="https://github.com/eugeneoh28/Twitter-Searcher">Twitter Searcher</a>
+            </p>
             <p><strong>Skills:</strong></p>
-            <p>Front-end Design, Web Development</p>
+            <p>Data mining, Scripting, Threading</p>
             <p><strong>Technologies Used:</strong></p>
-            <p>Html, Css, Bulma, Jquery, Node.js, Express</p>
+            <p>Python, Selenium Webdriver</p>
             <h1 class="Title">Background</h1>
             <p>
-              In the summer of 2017, I thought it was time that I put in some
-              time in order to develop my personal portfolio as well as my web
-              development skills. As this was my first website that I had ever
-              created on my own, I found many challenges in creating this website.
+              This project was a part of my work as a undergraduate research assistant for Joseph Shin, who is doing
+              research for Professor Emily Phanke at the University of Washington. The purpose of the research was to
+              analyze the twitter activity of unicorn firms in order to draw a connection between social media activity
+              and unicorn firm success. I wrote a twitter searcher to collect all the tweets for this research using python.
               <br>
-            </p>
-            <p>
-              This iteration of my website took me about 2 weeks to put together
-              I would call this website a work in progress as I am continually changing
-              things and adding things when I create new projects, but all in all I am
-              pretty proud of what I have been able to accomplish.
             </p>
             <h1 class="Title">Challenges</h1>
             <p>
-              This was the first time that I had put together a website without any guidance.
-              I had to teach myself a new framework (bulma) and also heavily customize it so that
-              it would cater to my needs. In addition, I had much difficulty in designing much of the
-              
+              One challenge was that I had to go from knowing zero python to delivering a working searcher within 2 weeks.
+              Also, because I wasn’t able to use the twitter API (The API limits to the first 2000 tweets of a user but we
+              needed all of the tweets from a user) I had to come up with my own method to scrape the tweets from twitter’s
+              website. The method I came up with was to split up the dates in which the twitter account was open into 100
+              day chunks and then have a number of web browsers (depending on the machine) search those 100 day chunks on
+              multiple threads through the twitter advanced search function. After it was able to scroll to the end of the
+              results page in the search, the html source would be extracted and the tweets would be pulled from the html
+              and put in a csv. Although this process was quite tedious, the twitter-searcher I wrote worked quite effectively
+              and was able to go beyond the 2000 tweet limit.
+            </p>
+            <h1 class="Title">What I learned</h1>
+            <p>
+              I became much more comfortable with python as I basically went from zero knowledge to writing a full-fledged program
+              in about 2 weeks. I also became much more comfortable with threading and using automated webdrivers.
+
             </p>
         </div>
       </div>
