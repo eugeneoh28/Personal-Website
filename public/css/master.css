@@ -217,6 +217,12 @@ hr {
 #service {
   display:none;
 }
+#dp {
+  background-image:url('/resources/img/dplogo.png');
+}
+#phra {
+  background-image:url('/resources/img/phra.png');
+}
 @media screen and (min-width: 0px) {
   .project-item {
     width:60vw;
@@ -259,9 +265,18 @@ hr {
   height:60vh;
   width: 50vw;
 }
-
-#twit-project {
-  background-image:('/resources/img/twitter-bird.svg');
+.project-image-container {
+  display:flex;
+  justify-content: center;
+}
+.project-image {
+  display:flex;
+  justify-content: center;
+  width:15vw;
+  height:15vw;
+}
+.project-image img {
+  border-radius: 13px;
 }
 @media screen and (min-width: 0px) {
   .text {width:80%;}
