@@ -1,8 +1,7 @@
 var express = require("express"),
     app = express(),
-    bodyParser = require("body-parser"),
-    methodOverride = require("method-override");
-
+    bodyParser = require("body-parser");
+    
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.static(__dirname + "/public"))
 app.set("view engine", "ejs");
