@@ -9364,8 +9364,8 @@ label.panel-block:hover {
 
 @media screen and (min-width: 769px), print {
   .hero.is-medium .hero-body {
-    padding-bottom: 9rem;
-    padding-top: 9rem;
+    padding-bottom: 12rem;
+    padding-top: 12rem;
   }
 }
 

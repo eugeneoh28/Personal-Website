@@ -15,10 +15,13 @@ hr {
 .navbar {
   margin: auto;
   width:75vw;
+  height:10%;
   background-color: transparent;
 }
 .nav {
   position:fixed;
+  display:flex;
+  justify-content: center;
   width:100vw;
   height:70px;
   background-color:transparent;
@@ -38,7 +41,9 @@ hr {
 .navbar-burger.is-active a {
   color: white;
 }
-
+.tablink {
+  z-index: 1000;
+}
 /****** active-nav**/
 @media screen and (max-width: 1007px) {
   .navbar-burger {
@@ -117,6 +122,13 @@ hr {
 .activelink a {
   color:#1BB2CC;
   border-bottom-color: #1BB2CC;
+}
+
+@media screen and (max-width: 769px), print {
+  .hero.is-medium .hero-body {
+      padding-bottom: 4.5rem;
+      padding-top: 4.5rem;
+  }
 }
 
 /******************** Home Page ************************************/
