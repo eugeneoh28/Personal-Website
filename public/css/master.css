@@ -114,6 +114,9 @@ hr {
   background-repeat: no-repeat;
   background-position: center;
 }
+.project-sec {
+  padding-top:0px;
+}
 .title {
   color:white;
 }
@@ -126,8 +129,8 @@ hr {
 
 @media screen and (max-width: 769px), print {
   .hero.is-medium .hero-body {
-      padding-bottom: 4.5rem;
-      padding-top: 4.5rem;
+      padding-bottom: 7rem;
+      padding-top: 7rem;
   }
 }
 
@@ -170,7 +173,7 @@ hr {
     font-size: 1.2rem;
   }
 }
-@media screen and (min-width:961px) {
+@media screen and (min-width:1024px) {
   .home-descrip {width:85%;}
   #home-text h1 {
     font-size: 2.8rem;
@@ -192,7 +195,6 @@ hr {
   background-size:cover;
   box-shadow: 0 15px 25px lightgrey;
   border: 0.5px solid lightgrey;
-  margin:25px;
   border-radius: 13px;
   opacity:1;
   transition: 0.4s;
@@ -216,6 +218,7 @@ hr {
   margin:auto;
   background-size: contain;
   background-repeat: no-repeat;
+  background-position: center;
 }
 .project-text {
   margin: 40% auto;
@@ -224,7 +227,19 @@ hr {
   padding-bottom: 3vh;
 }
 #work {
-  background-image: url('/resources/img/space2.svg');
+  background-image:url('/resources/img/space2.svg');
+}
+#website {
+  background-image:url('/resources/img/website.svg');
+}
+#twitter {
+  background-image:url('/resources/img/twitter-bird.svg');
+}
+#park {
+  background-image:url('/resources/img/park.svg');
+}
+#chess {
+  background-image:url('/resources/img/chess.svg');
 }
 #service {
   display:none;
@@ -235,16 +250,24 @@ hr {
 #phra {
   background-image:url('/resources/img/phra.png');
 }
+#hope {
+  background-image:url('/resources/img/hope.png');
+}
+#americorps {
+  background-image:url('/resources/img/americorps.png');
+}
 @media screen and (min-width: 0px) {
   .project-item {
-    width:60vw;
-    height:50vw;
+    width:100%;
+    height:65vw;
+    margin: 25px 0;
   }
 }
-@media screen and (min-width:961px) {
+@media screen and (min-width:1024px) {
   .project-item {
     width:40%;
     height:25vw;
+    margin:25px;
   }
 }
 .p1 {
@@ -267,15 +290,15 @@ hr {
 .project-details {
   background-image: url('/resources/img/footerspace.svg');
 }
+.project-hero {
+  padding-top:7rem;
+  padding-bottom:7rem;
+}
 .project-desc a {
   color:#;
 }
 .text {
   margin:auto;
-}
-.modal-content {
-  height:60vh;
-  width: 50vw;
 }
 .project-image-container {
   display:flex;
@@ -289,15 +312,31 @@ hr {
 }
 .project-image img {
   border-radius: 13px;
+
 }
 @media screen and (min-width: 0px) {
   .text {width:80%;}
+  .project-image {
+    padding-top:25px;
+    width:50vw;
+    height:40vw;
+    min-width: 225px;
+    min-height: 225px;
+  }
 }
-@media screen and (min-width:961px) {
+@media screen and (min-width:1024px) {
   .text {width:50%;}
+  .project-image {
+    padding-top:0px;
+    width:20vw;
+    height:20vw;
+  }
 }
 
 /********************* About Page **********************************/
 #about {
   background-image:url('/resources/img/space3.svg');
+}
+.about-icon {
+  color:#1BB2CC;
 }
