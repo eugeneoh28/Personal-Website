@@ -6163,10 +6163,6 @@ a.nav-item:not(.button).is-tab.is-active {
   margin-top: 4px;
 }
 
-.navbar-burger:hover {
-  background-color: whitesmoke;
-}
-
 .navbar-burger.is-active span {
   background-color: #1BB2CC;
 }

@@ -46,8 +46,8 @@ hr {
 }
 /****** active-nav**/
 @media screen and (max-width: 1007px) {
-  .navbar-burger {
-    padding: 2rem 1rem;
+  .nav {
+    position:absolute;
   }
   .navbar-menu.active-nav {
       display: block;
@@ -69,22 +69,30 @@ hr {
 }
 
 /******* topbar ****/
-.navbar-menu.topmenu {
-  background-color: white;
+@media screen and (min-width:1008px) {
+    .navbar-menu.topmenu {
+      background-color: white;
+    }
+    .navbar-burger.topburger span {
+      background-color: black;
+    }
+    .nav.topbar {
+      background-color: white;
+      box-shadow: 0 1.5px 1.5px lightgrey;
+    }
+    .nav.reachtop {
+      -webkit-transition:background-color 600ms;
+      -moz-transition:background-color 600ms;
+      transition:background-color 600ms;
+    }
+    .nav.topbar a {
+      color:black;
+    }
+    .nav.topbar span {
+      color:black;
+    }
 }
-.navbar-burger.topburger span {
-  background-color: black;
-}
-.nav.topbar {
-  background-color: white;
-  box-shadow: 0 1.5px 1.5px lightgrey;
-}
-.nav.topbar a {
-  color:black;
-}
- .nav.topbar span {
-   color:black;
- }
+
 /*******************/
 .hidden{
   opacity:0;
@@ -121,7 +129,7 @@ hr {
   color:white;
 }
 /* Title for pages */
-.container { max-width:75vw; }
+.container { max-width: 75vw; }
 .activelink a {
   color:#1BB2CC;
   border-bottom-color: #1BB2CC;
@@ -315,7 +323,7 @@ hr {
 
 }
 @media screen and (min-width: 0px) {
-  .text {width:80%;}
+  .text {width:100%;}
   .project-image {
     padding-top:25px;
     width:50vw;
@@ -325,7 +333,7 @@ hr {
   }
 }
 @media screen and (min-width:1024px) {
-  .text {width:50%;}
+  .text {width:60%;}
   .project-image {
     padding-top:0px;
     width:20vw;
@@ -336,6 +344,19 @@ hr {
 /********************* About Page **********************************/
 #about {
   background-image:url('/resources/img/space3.svg');
+}
+#personalpic {
+  width:45%;
+  height:45%;
+  min-width:200px;
+  min-height: 200px;
+  border: 0.5px solid lightgrey;
+  border-radius: 13px;
+  margin:5px;
+  
+}
+.about-sec {
+  padding-bottom:5rem;
 }
 .about-icon {
   color:#1BB2CC;

@@ -11,26 +11,23 @@ $(document).ready(function() {
   $('.hidden').animate({opacity:1}, 600);
 
 });
-
 var lastTop = 0;
 $(window).scroll(function(){
   var top = $(this).scrollTop();
-  if (top > lastTop) {
-    $('.nav').slideUp();
-  } else {
-    if (top == 0) {
-      $('.nav').slideDown().removeClass('topbar').css({
-        "-webkit-transition":"background-color 600ms",
-        "-moz-transition":"background-color 600ms",
-        "transition":"background-color 600ms"
-      });
-      $('.navbar-menu').removeClass('topmenu');
-      $('.navbar-burger').removeClass('topburger');
-
+  if ($(window).width() > 1007) {
+   if (top > lastTop) {
+    $('.nav').slideUp();  
     } else {
-      $('.nav').slideDown().addClass('topbar');
-      $('.navbar-menu').addClass('topmenu');
-      $('.navbar-burger').addClass('topburger');
+      if (top == 0) {
+        $('.nav').slideDown().removeClass('topbar').addClass("reachtop")
+        $('.navbar-menu').removeClass('topmenu');
+        $('.navbar-burger').removeClass('topburger');
+
+      } else {
+        $('.nav').slideDown().addClass('topbar');
+        $('.navbar-menu').addClass('topmenu');
+        $('.navbar-burger').addClass('topburger');
+      }
     }
   }
   lastTop = top;
