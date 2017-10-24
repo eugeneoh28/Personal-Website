@@ -249,6 +249,9 @@ hr {
 #chess {
   background-image:url('/resources/img/chess.svg');
 }
+#shelter {
+  background-image: url('/resources/img/map.svg');
+}
 #service {
   display:none;
 }
