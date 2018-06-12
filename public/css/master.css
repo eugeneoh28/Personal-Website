@@ -237,6 +237,9 @@ hr {
 #work {
   background-image:url('/resources/img/space2.svg');
 }
+#blog {
+  background-image:url('/resources/img/space4.svg');
+}
 #website {
   background-image:url('/resources/img/website.svg');
 }
@@ -363,4 +366,21 @@ hr {
 }
 .about-icon {
   color:#1BB2CC;
+}
+
+/********************* Blog Page **********************************/
+
+.card {
+  margin:2vw;
+}
+.blog-subtitle {
+  color:white;
+}
+
+#blog-title {
+  color:black;
+}
+#blog-hero {
+  padding-top:7rem;
+  padding-bottom:7rem;
 }

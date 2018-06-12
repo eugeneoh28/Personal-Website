@@ -14,6 +14,14 @@ app.get("/work", function(req, res) {
   res.render("work");
 });
 
+app.get("/blog", function(req, res)  {
+	res.render("blog");
+});
+
+app.get("/blog:post", function(req, res){
+	res.render("blog/"+req.params.post);
+});
+
 app.get("/work/:project", function(req, res){
   res.render('work/'+req.params.project);
 });
