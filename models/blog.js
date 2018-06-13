@@ -1,10 +1,9 @@
 var mongoose = require("mongoose");
 
 var blogSchema = new mongoose.Schema({
-    blog_id:Number,
-    order:Number,
     title:String,
-    date:String,
+    author:String,
+    date:Date,
     post:String    
 })
 

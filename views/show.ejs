@@ -1,4 +1,25 @@
 <% include ./partials/header %>
-	
+<section id="blog" class="background hero is-medium">
+  <div class="hero-body" id="blog-hero">
+    <div class="container">
+      <div class="columns is-centered">
+          <div class="column is-half has-text-centered">
+              <h1 class="title"><%=blog.title%></h1>
+              <h1 class="blog-subtitle subtitle"><%=blog.author%></h1>
+              <h3 class="blog-subtitle subtitle"><%=blog.date%></h3>
+
+            </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="container" id="blogpost">
+  	<p><%=blog.post%></p>
+</div>
+
+
+
+
 
 <% include ./partials/footer %>

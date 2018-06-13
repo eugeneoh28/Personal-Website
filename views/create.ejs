@@ -1,0 +1,57 @@
+<% include ./partials/header %>
+<section id="blog" class="background hero is-medium">
+  <div class="hero-body" id="blog-hero">
+    <div class="container">
+      <div class="columns is-centered">
+          <div class="column is-half has-text-centered">
+              <h1 class="title">New Blog</h1>
+	        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<div class="container" id="createBlog">
+	<form action="/blog/create" method="post">
+		<div class="field">
+		  <label class="label">Title</label>
+		  <div class="control">
+		    <input class="input" type="text" name="title">
+		  </div>
+		</div>	
+
+		<div class="field">
+		  <label class="label">Author</label>
+		  <div class="control">
+		    <input class="input" type="text" name="author">
+		  </div>
+		</div>	
+
+		<div class="field">
+		  <label class="label">Date</label>
+		  <div class="control">
+		    <input id="date1" class="input" type="text" name="date">
+		  </div>
+		</div>	
+
+		<div class="field">
+		  <label class="label">Post</label>
+		  <div class="control">
+    		<textarea class="textarea" placeholder="Postarea" name="post"></textarea>
+		  </div>
+		</div>
+		
+		<div class="field is-grouped">
+		  <div class="control">
+		    <button type="submit" class="button is-primary">Submit</button>
+		  </div>
+		</div>
+	</form>	
+</div>
+
+<script type="text/javascript">
+	document.getElementById("date1").value = Date().toString();
+</script>
+
+<% include ./partials/footer %>

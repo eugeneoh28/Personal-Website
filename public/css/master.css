@@ -384,3 +384,17 @@ hr {
   padding-top:7rem;
   padding-bottom:7rem;
 }
+
+#createBlog {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+#blogpost {
+  padding-top: 3rem;
+  padding-bottom: 3rem
+}
+
+.card-footer-item {
+  color:black;
+}

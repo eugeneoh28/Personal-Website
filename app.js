@@ -28,15 +28,15 @@ app.get("/blog", function(req, res)  {
 			console.log(err)
 		} else {
 			allBlogs.sort(function(a,b){
-				return b.order-a.order;
+				return b.date-a.date;
 			});
 			res.render("blog", {blogs:allBlogs})
 		}
 	});
 });
 
-app.get("/blog:post", function(req, res){
-	Blog.find({blog_id:req.params.post}, function(err, foundBlog) {
+app.get("/blog/:post", function(req, res){
+	Blog.findById(req.params.post, function(err, foundBlog) {
 		if (err) {
 			console.log(err)
 		} else {
@@ -44,6 +44,21 @@ app.get("/blog:post", function(req, res){
 		}
 	});
 });
+
+app.get("/blog/create", function(req, res) {
+		res.render("create");
+});
+
+app.post("/blog/create", function(req, res) {
+	var newPost = new Blog({title:req.body.title, author:req.body.author, date:req.body.date, post:req.body.post});
+	Blog.create(newPost, function(err, newlyCreated) {
+		if(err) {
+			console.log(err)
+		} else {
+			res.redirect("/blog")
+		}
+	})
+})
 
 app.get("/work/:project", function(req, res){
   res.render('work/'+req.params.project);
