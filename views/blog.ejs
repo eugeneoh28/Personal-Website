@@ -15,21 +15,20 @@
       </div>
     </section>
     <section class= "container">
-			
     	<div class="container">
-
-    		<div class="card">
-    			<div class="card-content">
-    				<div class="media-content">
-    						<p class="title is-4" id="blog-title">Blog Test 1</p>
-    						<p class="subtitle is-6">Date</p>
-    				</div>
-    				<div class="content">
-    					Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      				Phasellus nec iaculis mauris. <a>@bulmaio</a>.
-    				</div>
-    			</div>
-    		</div>
+	    	<%blogs.forEach(function(blog){%>
+					<div class="card">
+		    			<div class="card-content">
+		    				<div class="media-content">
+		    						<p class="title is-4" id="blog-title"><%=blog.title%></p>
+		    						<p class="subtitle is-6"><%=blog.date%></p>
+		    				</div>
+		    				<div class="content">
+		    					<%=blog.post.substring(0,250) + "..."%>
+		    				</div>
+		    			</div>
+		    	</div>
+	    	<%})%>
     	</div>
     </section>
 
