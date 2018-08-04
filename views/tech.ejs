@@ -1,0 +1,48 @@
+  <% include ./partials/header %>
+    <div class="container">
+        <div class="row">
+            <div class="five columns">
+              <div class="content">
+                <p class="title"><%=data['projName']%>.</p>
+                <p class="sub-1-title">
+                  <span class="under-line">Timeline:</span> <span class="sub-2-title"><%=data['timeline']%></span>
+                </p>
+                <p class="sub-1-title">
+                  <span class="under-line">Github:</span> <span class="sub-2-title"><a href="<%=data['github']%>"><%=data['projName']%></a></span>
+                </p>
+                <p class="sub-1-title">
+                  <span class="under-line">Skills:</span><br>
+                  <span class="sub-2-title"><%=data['skills']%></span>
+                </p>
+                <p class="sub-1-title">
+                  <span class="under-line">Technologies Used:</span><br>
+                  <span class="sub-2-title"><%=data['technologies']%></span>
+                </p>
+                
+                
+                <p></p>
+                <div class="circular-image">
+                  <img src="resources/eugene.jpg">
+                </div>
+              </div>
+            </div>  
+            <div class="seven columns">
+              <div class="content">
+                <p class="sub-1-title">Background</p>
+                <p class="sub-3-title">
+                  <%=data['background']%>
+                </p>
+                <p class="sub-1-title">Challenges</p>
+                <p class="sub-3-title">
+                  <%=data['challenges']%>
+                </p>
+                <p class="sub-1-title">What I learned:</p>
+                <p class="sub-3-title">
+                  <%=data['learned']%>
+                </p>
+              </div>
+            </div>
+        </div>
+    </div>
+  <% include ./partials/footer %>
+

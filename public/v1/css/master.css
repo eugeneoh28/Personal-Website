@@ -1,0 +1,366 @@
+body {
+    opacity: 1;
+    font-family: 'Montserrat', sans-serif;
+    transition: 1s opacity;
+}
+body.fade-out {
+    opacity: 0;
+    transition: none;
+}
+hr {
+  border:black;
+}
+/******************** Overall  *************************************/
+/* Navbar */
+.navbar {
+  margin: auto;
+  width:75vw;
+  height:10%;
+  background-color: transparent;
+}
+.nav {
+  position:fixed;
+  display:flex;
+  justify-content: center;
+  width:100vw;
+  height:70px;
+  background-color:transparent;
+}
+.navbar-burger span {
+  background-color:white;
+}
+.nav a {
+  color:white;
+}
+.nav a:hover {
+  color:black;
+}
+.navbar-burger.is-active span {
+  background-color: white;
+}
+.navbar-burger.is-active a {
+  color: white;
+}
+.tablink {
+  z-index: 1000;
+}
+/****** active-nav**/
+@media screen and (max-width: 1007px) {
+  .nav {
+    position:absolute;
+  }
+  .navbar-menu.active-nav {
+      display: block;
+      visibility: visible;
+      opacity: 1;
+      background-color: #314B54;
+      transition: 300ms ease-in;
+      -webkit-transition: 300ms;
+      -moz-transition: 300ms;
+  }
+  .navbar-menu {
+    display:block;
+    visibility: hidden;
+    opacity: 0;
+    transition: 300ms ease-out;
+    -webkit-transition: 300ms;
+    -moz-transition: 300ms;
+  }
+}
+
+/******* topbar ****/
+@media screen and (min-width:1008px) {
+    .navbar-menu.topmenu {
+      background-color: white;
+    }
+    .navbar-burger.topburger span {
+      background-color: black;
+    }
+    .nav.topbar {
+      background-color: white;
+      box-shadow: 0 1.5px 1.5px lightgrey;
+    }
+    .nav.reachtop {
+      -webkit-transition:background-color 600ms;
+      -moz-transition:background-color 600ms;
+      transition:background-color 600ms;
+    }
+    .nav.topbar a {
+      color:black;
+    }
+    .nav.topbar span {
+      color:black;
+    }
+}
+
+/*******************/
+.hidden{
+  opacity:0;
+  transition: 0.2s;
+}
+.footer {
+  background-color:#4A7180;
+  background-image: url('/v1/resources/img/footerspace.svg');
+}
+.footer p {
+  color:white;
+}
+.footer a {
+  color:white;
+}
+.intro-section {
+  opacity:0;
+}
+@media screen and (max-width:1008px) {
+  .navbar {
+    width:90vw;
+  }
+}
+/* Background */
+.background {
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.project-sec {
+  padding-top:0px;
+}
+.title {
+  color:white;
+}
+/* Title for pages */
+.container { max-width: 75vw; }
+.activelink a {
+  color:#1BB2CC;
+  border-bottom-color: #1BB2CC;
+}
+
+@media screen and (max-width: 769px), print {
+  .hero.is-medium .hero-body {
+      padding-bottom: 7rem;
+      padding-top: 7rem;
+  }
+}
+
+/******************** Home Page ************************************/
+.blink {
+  margin:2vh;
+  opacity:0.1;
+}
+.home-descrip {
+  margin:auto;
+  text-align: center;
+}
+#home-text {
+  text-align:center;
+  margin-top:25vh;
+
+}
+#hello{
+  height:15%;
+  width:20%;
+  min-height: 200px;
+  min-width: 200px;
+}
+#rocket {
+  height:25%;
+  width:15%;
+  min-height: 200px;
+  min-width: 200px;
+}
+#homesplash {
+  background-image:url('/v1/resources/img/space.svg');
+}
+@media screen and (min-width: 0px) {
+  .home-descrip {width:90%;}
+  #home-text h1 {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  #home-text p {
+    font-size: 1.2rem;
+  }
+}
+@media screen and (min-width:1024px) {
+  .home-descrip {width:85%;}
+  #home-text h1 {
+    font-size: 2.8rem;
+    font-weight: bold;
+  }
+  #home-text p {
+    font-size: 1.5rem;
+  }
+}
+
+/************************ Work Page ******************************/
+.project-container {
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+}
+.project-item {
+  background-size:cover;
+  box-shadow: 0 15px 25px lightgrey;
+  border: 0.5px solid lightgrey;
+  border-radius: 13px;
+  opacity:1;
+  transition: 0.4s;
+  color:transparent;
+
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+.project-item:hover{
+  color:black;
+  transition: 1s;
+  cursor:pointer;
+  opacity:0.5;
+  box-shadow: 0 8px 10px lightgrey;
+}
+.project-background {
+  text-align: center;
+  width:80%;
+  height:80%;
+  margin:auto;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.project-text {
+  margin: 40% auto;
+}
+.tab {
+  padding-bottom: 3vh;
+}
+#work {
+  background-image:url('/v1/resources/img/space2.svg');
+}
+#website {
+  background-image:url('/v1/resources/img/website.svg');
+}
+#twitter {
+  background-image:url('/v1/resources/img/twitter-bird.svg');
+}
+#park {
+  background-image:url('/v1/resources/img/park.svg');
+}
+#chess {
+  background-image:url('/v1/resources/img/chess.svg');
+}
+#shelter {
+  background-image: url('/v1/resources/img/map.svg');
+}
+#service {
+  display:none;
+}
+#dp {
+  background-image:url('/v1/resources/img/dplogo.png');
+}
+#phra {
+  background-image:url('/v1/resources/img/phra.png');
+}
+#hope {
+  background-image:url('/v1/resources/img/hope.png');
+}
+#americorps {
+  background-image:url('/v1/resources/img/americorps.png');
+}
+@media screen and (min-width: 0px) {
+  .project-item {
+    width:100%;
+    height:65vw;
+    margin: 25px 0;
+  }
+}
+@media screen and (min-width:1024px) {
+  .project-item {
+    width:40%;
+    height:25vw;
+    margin:25px;
+  }
+}
+.p1 {
+  background-color: #F9687F;
+}
+.p2 {
+  background-color: #3DBED4;
+}
+.p3 {
+  background-color: #6F858D;
+}
+.p4 {
+  background-color: #60A46E;
+}
+.p5 {
+  background-color: #F2F7F6;
+}
+
+/********************* Project Details ****************************/
+.project-details {
+  background-image: url('/v1/resources/img/footerspace.svg');
+}
+.project-hero {
+  padding-top:7rem;
+  padding-bottom:7rem;
+}
+.project-desc a {
+  color:#;
+}
+.text {
+  margin:auto;
+}
+.project-image-container {
+  display:flex;
+  justify-content: center;
+}
+.project-image {
+  display:flex;
+  justify-content: center;
+  width:15vw;
+  height:15vw;
+}
+.project-image img {
+  border-radius: 13px;
+
+}
+@media screen and (min-width: 0px) {
+  .text {width:100%;}
+  .project-image {
+    padding-top:25px;
+    width:50vw;
+    height:40vw;
+    min-width: 225px;
+    min-height: 225px;
+  }
+}
+@media screen and (min-width:1024px) {
+  .text {width:60%;}
+  .project-image {
+    padding-top:0px;
+    width:20vw;
+    height:20vw;
+  }
+}
+
+/********************* About Page **********************************/
+#about {
+  background-image:url('/v1/resources/img/space3.svg');
+}
+#personalpic {
+  width:45%;
+  height:45%;
+  min-width:200px;
+  min-height: 200px;
+  border: 0.5px solid lightgrey;
+  border-radius: 13px;
+  margin:5px;
+  
+}
+.about-sec {
+  padding-bottom:5rem;
+}
+.about-icon {
+  color:#1BB2CC;
+}

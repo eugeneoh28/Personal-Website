@@ -1,81 +1,44 @@
-<% include ./partials/header %>
-    <section id="work" class="background hero is-medium">
-      <div class="hero-body">
-        <div class="container">
-          <div class="columns is-centered">
-              <div class="column is-half has-text-centered">
-                  <h1 class="title">My Work.</h1>
-              </div>
+  <% include ./partials/header %>
+    <div class="container">
+      <div class="row">
+        <div class="five columns">
+          <div class="content">
+            <p class="title highlight">My Work.</p>
+            <p class="sub-1-title">
+              I enjoy working on projects where I can do full-stack development and
+              engage with my community.
+            </p>
           </div>
         </div>
-      </div>
-    </section>
-    <div class="tabs is-centered is-fullwidth">
-      <ul class="tab-links">
-        <li id="titletechnical" ><a href="#technical">Technical Projects</a></li>
-        <li id="titleservice"><a href="#service">Service Projects</a></li>
-      </ul>
-    </div>
+        <div class="seven columns">
+          <div class="box">
+            <ul class="tabs">
+              <li id="titletechnical" href="#technical">Technical Projects</li>
+              <li id="titleservice" href="#service">Service Projects</li>
+            </ul>
+            <div class="projects">
+              <div class="project-section" id="technical">
+                <div class="project-text">
+                  <% Object.keys(data['technical']).forEach(function(k) { %>
+                  <a class="project-title" href="/work/tech/<%=k%>"><%= data['technical'][k]['projName'] %>:</a>
+                  <p class="project-desc"><%= data['technical'][k]['projDesc'] %></p>
+                  <% }); %>
+                  <hr>
+                </div>
+              </div>
+              <div class="project-section" id="service">
+                <div class="project-text">
+                  <% Object.keys(data['service']).forEach(function(k) { %>
+                  <a class="project-title" href="/work/service/<%=k%>"><%= data['service'][k]['projName'] %>:</a>
+                  <p class="project-desc"><%= data['service'][k]['projDesc'] %></p>
+                  <% }); %>
+                </div>
+              </div>
+            </div>
 
-    <div class="container tab-content hidden">
-      <div id="technical" class="tab">
-        <div class="project-container">
-          <a class="project-item p4" href="/work/sheltermap">
-            <div class="project-background" id="shelter">
-              <h1 class="project-text">Shelter Map</h1>
-            </div>
-          </a>
-          <a class="project-item p2" href="/work/personalwebsite">
-            <div class="project-background" id="website">
-              <h1 class="project-text">Personal Website</h1>
-            </div>
-          </a>
-          <a class="project-item p1" href="/work/twittersearcher">
-            <div class="project-background" id="twitter">
-              <h1 class="project-text">Twitter Searcher</h1>
-            </div>
-          </a>
-          <a class="project-item p3" href="/work/parkreviews">
-            <div class="project-background" id="park">
-              <h1 class="project-text">Park Reviews Website</h1>
-            </div>
-          </a>
-          <a class="project-item p5" href="/work/chessbot">
-            <div class="project-background" id="chess">
-              <h1 class="project-text">Chess Bot</h1>
-            </div>
-          </a>
-          <%# <a class="project-item p5" href="/work/cameradict">
-            <div class="project-background">
-              <h1 class="project-text">Camera Dictionary</h1>
-            </div>
-          </a>%>
+          </div>
         </div>
-      </div>
-      <div id="service" class="tab">
-        <div class="project-container">
-          <a class=" p2 project-item" href="/work/dreamproject">
-            <div class="project-background" id="dp">
-              <h1 class="project-text">Dream Project</h1>
-            </div>
-          </a>
-          <a class=" p5 project-item" href="/work/phra">
-            <div class="project-background" id="phra">
-              <h1 class="project-text">People's Harm Care Alliance</h1>
-            </div>
-          </a>
-          <a class=" p3 project-item" href="/work/hope">
-            <div class="project-background" id="hope">
-              <h1 class="project-text">Huskies for Opportunities in Prison Education</h1>
-            </div>
-          </a>
-          <a class=" p1 project-item" href="/work/americorps">
-            <div class="project-background" id="americorps">
-              <h1 class="project-text">AmeriCorps</h1>
-            </div>
-          </a>
-        </div>
-      </div>
+      </div> 
     </div>
-<script src="js/work.js" type="text/javascript"></script>
-<% include ./partials/footer %>
+    <script type="text/javascript" src="js/work.js"></script>
+  <% include ./partials/footer %>
