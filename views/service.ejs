@@ -1,0 +1,43 @@
+  <% include ./partials/header %>
+    <div class="container">
+        <div class="row">
+            <div class="five columns">
+              <div class="content">
+                <p class="title"><%=data['projName']%>.</p>
+                <p class="sub-1-title">
+                  <span class="under-line">Timeline:</span> <span class="sub-2-title"><%=data['timeline']%></span>
+                </p>
+                <p class="sub-1-title">
+                  <span class="under-line">Position:</span> <span class="sub-2-title"><%=data['position']%></span>
+                </p>
+                <p class="sub-1-title">
+                  <span class="under-line">Website:</span> <span class="sub-2-title"><a href="<%=data['website']%>"><%=data['projName']%></a></span>
+                </p>
+                
+                
+                <p></p>
+                <div class="circular-image">
+                  <img src="resources/eugene.jpg">
+                </div>
+              </div>
+            </div>  
+            <div class="seven columns">
+              <div class="content">
+                <p class="sub-1-title">Background</p>
+                <p class="sub-3-title">
+                  <%=data['background']%>
+                </p>
+                <p class="sub-1-title">My Role</p>
+                <p class="sub-3-title">
+                  <%=data['role']%>
+                </p>
+                <p class="sub-1-title">Future Goals:</p>
+                <p class="sub-3-title">
+                  <%=data['future']%>
+                </p>
+              </div>
+            </div>
+        </div>
+    </div>
+  <% include ./partials/footer %>
+

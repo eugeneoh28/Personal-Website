@@ -1,15 +1,29 @@
 var express = require("express"),
     app = express(),
-    mongoose = require("mongoose"),
-    Blog = require("./models/blog"),
-    Draft = require("./models/draft"),
     bodyParser = require("body-parser"),
-    seedDB = require("./seeds");
+    admin = require("firebase-admin"),
+    serviceAccount = require("./key.json"),
+    v1 = require("./v1.js");
 
-mongoose.connect("mongodb://eugeneoh28:hello1@ds159110.mlab.com:59110/personal-blog")
+
+admin.initializeApp({
+  credential: admin.credential.cert(serviceAccount),
+  databaseURL: "https://personal-website-dc900.firebaseio.com"
+});
+var database = admin.database(),
+		ref = database.ref(),
+		data = {};
+
+ref.on("value", function(snapshot) {
+   data = snapshot.val();
+}, function (error) {
+   console.log("Error: " + error.code);
+});
+
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.static(__dirname + "/public"))
 app.set("view engine", "ejs");
+app.use('/', v1);
 
 seedDB();
 
@@ -18,54 +32,21 @@ app.get("/", function(req, res) {
   res.render("home");
 });
 
-app.get("/work", function(req, res) {
-  res.render("work");
-});
-
-app.get("/blog", function(req, res)  {
-	Blog.find({}, function(err, allBlogs) {
-		if (err) {
-			console.log(err)
-		} else {
-			allBlogs.sort(function(a,b){
-				return b.date-a.date;
-			});
-			res.render("blog", {blogs:allBlogs})
-		}
-	});
-});
-
-app.get("/blog/:post", function(req, res){
-	Blog.findById(req.params.post, function(err, foundBlog) {
-		if (err) {
-			console.log(err)
-		} else {
-			res.render("show", {blog:foundBlog})
-		}
-	});
-});
-
-app.get("/blog/create", function(req, res) {
-		res.render("create");
-});
-
-app.post("/blog/create", function(req, res) {
-	var newPost = new Blog({title:req.body.title, author:req.body.author, date:req.body.date, post:req.body.post});
-	Blog.create(newPost, function(err, newlyCreated) {
-		if(err) {
-			console.log(err)
-		} else {
-			res.redirect("/blog")
-		}
-	})
-})
-
-app.get("/work/:project", function(req, res){
-  res.render('work/'+req.params.project);
-});
-
 app.get("/about", function(req, res) {
   res.render("about");
+});
+
+app.get("/work", function(req, res) {
+
+  res.render("work", {data:data});
+});
+
+app.get("/work/tech/:project", function(req, res){
+  res.render('tech', {data:data['technical'][req.params.project]});
+});
+
+app.get("/work/service/:project", function(req, res){
+  res.render('service', {data:data['service'][req.params.project]});
 });
 
 app.get("/*", function(req, res) {
