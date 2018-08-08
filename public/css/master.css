@@ -13,7 +13,7 @@ hr {
  overflow: hidden;
  display: block;
  position: relative;
- padding-bottom: 100px; /* height of your footer */
+ padding-bottom: 10rem; /* height of your footer */
 }
 
 .navbar {
@@ -21,7 +21,7 @@ hr {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    font-size: 25px;
+    font-size: 2.5rem;
 }
 
 .navbar-brand {
@@ -30,10 +30,6 @@ hr {
 
 .navbar-brand a {
     color:#fccfd5;
-}
-
-.navbar-links {
-	float:right;
 }
 
 .navbar-links a {
@@ -47,7 +43,7 @@ hr {
 .navbar-item{
 	display: inline-block;
     text-align: center;
-    padding: 14px 16px;
+    padding: 1.4rem 1.2rem;
     text-decoration: none;
 }
 
@@ -55,13 +51,28 @@ hr {
     color: grey;
 }
 
+@media (min-width: 321px) {
+	.navbar-links {
+		float:right;
+	}
+	.navbar-item {
+		padding:1.4rem 1.6rem;
+	}
+}
+
+@media (max-width: 768px) {
+	.navbar {
+		font-size: 1.5rem;
+	}
+}
+
 .footer {
 	position:absolute;
 	bottom:0;
-	margin:3rem 0;
+	margin:2rem 0;
 	text-align: center;
 	width:100%;
-	font-size: 30px;
+	font-size: 3rem;
 }
 
 .footer i:hover {
@@ -73,19 +84,39 @@ hr {
 	margin-top:12rem;
 	padding-left:2rem;
 }
+@media (max-width: 425px) {
+	.content {
+		margin: 6rem 1rem;
+		padding-left: 0;
+	}
+	.content p {
+		text-align: center;
+	}
+}
 
 .title {
-	font-size:50px;
+	font-size:5rem;
 	margin-bottom: 0;
 }
 
+@media (max-width: 768px) {
+	.title {
+		font-size: 3.25rem;
+	}
+}
+
 .sub-1-title {
-	font-size:30px;
-	margin-bottom: 10px;
+	font-size:3rem;
+	margin-bottom: 1rem;
+}
+@media (max-width: 768px) {
+	.sub-1-title {
+		font-size: 2rem;
+	}
 }
 
 .sub-2-title{
-	font-size: 25px;
+	font-size: 2.5rem;
 }
 
 .sub-2-title a {
@@ -97,117 +128,35 @@ hr {
 }
 
 .sub-3-title{
-	font-size: 19px;
+	font-size: 1.9rem;
 	text-decoration: none;
 	color:grey;
 }
 
-<<<<<<< HEAD
-  display:flex;
-  justify-content: center;
-  align-items: center;
-}
-.project-item:hover{
-  color:black;
-  transition: 1s;
-  cursor:pointer;
-  opacity:0.5;
-  box-shadow: 0 8px 10px lightgrey;
-}
-.project-background {
-  text-align: center;
-  width:80%;
-  height:80%;
-  margin:auto;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.project-text {
-  margin: 40% auto;
-}
-.tab {
-  padding-bottom: 3vh;
-}
-#work {
-  background-image:url('/resources/img/space2.svg');
-}
-#blog {
-  background-image:url('/resources/img/space4.svg');
-}
-#website {
-  background-image:url('/resources/img/website.svg');
-}
-#twitter {
-  background-image:url('/resources/img/twitter-bird.svg');
-}
-#park {
-  background-image:url('/resources/img/park.svg');
-}
-#chess {
-  background-image:url('/resources/img/chess.svg');
-}
-#shelter {
-  background-image: url('/resources/img/map.svg');
-}
-#service {
-  display:none;
-}
-#dp {
-  background-image:url('/resources/img/dplogo.png');
-}
-#phra {
-  background-image:url('/resources/img/phra.png');
-}
-#hope {
-  background-image:url('/resources/img/hope.png');
-}
-#americorps {
-  background-image:url('/resources/img/americorps.png');
-}
-@media screen and (min-width: 0px) {
-  .project-item {
-    width:100%;
-    height:65vw;
-    margin: 25px 0;
-  }
-}
-@media screen and (min-width:1024px) {
-  .project-item {
-    width:40%;
-    height:25vw;
-    margin:25px;
-  }
-}
-.p1 {
-  background-color: #F9687F;
-}
-.p2 {
-  background-color: #3DBED4;
-}
-.p3 {
-  background-color: #6F858D;
-}
-.p4 {
-  background-color: #60A46E;
-}
-.p5 {
-  background-color: #F2F7F6;
-=======
 .box {
 	margin:12rem 10rem;
-	height:60%;
+	height:70%;
 	width:80%;
->>>>>>> master2
+}
+
+@media (max-width: 425px) {
+	.box {
+		margin:auto;
+	}
 }
 
 .tabs {
 	display:flex;
 	list-style-type: none;
 	margin:0;
-	font-size:30px;
+	font-size:3rem;
 	align-content: center;
 	color:grey;
+}
+@media (max-width:768px) {
+	.tabs {
+		font-size:2rem;
+	}
 }
 
 .tabs li {
@@ -215,7 +164,7 @@ hr {
 	padding: 0 3rem;
 	width:70%;
 	flex:1;
-	border-bottom: 1px solid grey;
+	border-bottom: 0.1rem solid grey;
 }
 
 .tabs li:hover {
@@ -227,7 +176,7 @@ hr {
 }
 
 .projects {
-	margin:0 0.5rem;
+	margin:0 0.6rem;
 	height:30rem;
 	align-content: center;
 	overflow:auto;
@@ -244,12 +193,21 @@ hr {
 	text-decoration: none;
 }
 .project-title {
-	font-size:22.5px;
+	font-size:2.25rem;
 	margin:0;
 }
 
 .project-desc {
-	font-size:17.5px;
+	font-size:1.7rem;
+}
+
+@media (max-width: 768px) {
+	.project-title {
+		font-size: 1.8rem;
+	}
+	.project-desc {
+		font-size: 1.2rem;
+	}
 }
 
 .circular-image {
@@ -266,4 +224,30 @@ hr {
   width: auto;
   height: 100%;
   margin-left:-22px;
+}
+
+#homeimg {
+  margin: auto;
+  display: block;
+  width:60%;
+}
+
+#workimg {
+	width:70%;
+}
+
+@media (max-width: 425px) {
+	#workimg {
+		margin:auto;
+		display: block;
+	}
+}
+
+@media (min-width: 426px) {
+	#workimg {
+		float:left;
+	}
+}
+#homeimgdiv {
+	margin-top:8rem;
 }
