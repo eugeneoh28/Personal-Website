@@ -6,7 +6,7 @@ var express = require("express"),
 
 
 admin.initializeApp({
-  credential: admin.credential.cert(process.env.FIREBASE_JSON),
+  credential: admin.credential.cert(JSON.parse(process.env.FIREBASE_JSON)),
   databaseURL: "https://personal-website-dc900.firebaseio.com"
 });
 var database = admin.database(),
