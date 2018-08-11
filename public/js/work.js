@@ -1,6 +1,5 @@
 $(document).ready(function(){
-  $('#titletechnical').addClass('active');
-  $('#technical').fadeIn(600).siblings().hide().fadeOut(600)
+  $('#technical').siblings().hide();
 });
 
 $('.tabs li').on('click', function(e){
