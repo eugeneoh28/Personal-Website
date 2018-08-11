@@ -35,7 +35,7 @@ app.get("/about", function(req, res) {
 });
 
 app.get("/work", function(req, res) {
-  res.render("work", {data:data});
+  res.render("work", {data:data['list']});
 });
 
 app.get("/work/tech/:project", function(req, res){

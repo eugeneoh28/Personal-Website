@@ -1,14 +1,14 @@
   <% include ./partials/header %>
     <div class="container">
       <div class="row">
-        <div class="five columns">
+        <div class="five columns fade">
           <div class="content">
             <p class="title highlight">My Work.</p>
             <p class="sub-1-title">
               I enjoy working on projects where I can do full-stack development and
               engage with my community.
             </p>
-            <img src="/resources/img/totoro2.svg" id="workimg">
+            <img src="/resources/img/totoro2.svg" id="workimg" alt="Totoro and friends-Graphics from pngtree.com">
           </div>
         </div>
         <div class="seven columns">
@@ -20,18 +20,18 @@
             <div class="projects">
               <div class="project-section" id="technical">
                 <div class="project-text">
-                  <% Object.keys(data['technical']).forEach(function(k) { %>
-                  <a class="project-title" href="/work/tech/<%=k%>"><%= data['technical'][k]['projName'] %>:</a>
-                  <p class="project-desc"><%= data['technical'][k]['projDesc'] %></p>
+                  <% data['technical'].forEach(function(project) { %>
+                  <a class="project-title" href="/work/tech/<%=project['linkname']%>"><%= project['projName'] %>:</a>
+                  <p class="project-desc"><%= project['projDesc'] %></p>
                   <% }); %>
                   <hr>
                 </div>
               </div>
               <div class="project-section" id="service">
                 <div class="project-text">
-                  <% Object.keys(data['service']).forEach(function(k) { %>
-                  <a class="project-title" href="/work/service/<%=k%>"><%= data['service'][k]['projName'] %>:</a>
-                  <p class="project-desc"><%= data['service'][k]['projDesc'] %></p>
+                  <% data['service'].forEach(function(project) { %>
+                  <a class="project-title" href="/work/service/<%=project['linkname']%>"><%= project['projName'] %>:</a>
+                  <p class="project-desc"><%= project['projDesc'] %></p>
                   <% }); %>
                 </div>
               </div>
