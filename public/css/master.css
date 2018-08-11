@@ -213,6 +213,10 @@ hr {
 	display:none;
 }
 
+#technical {
+	display:block;
+}
+
 .project-text {color:grey;}
 .project-text a:hover{color:black;}
 .project-text a {
