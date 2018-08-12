@@ -1,8 +1,7 @@
   <% include ./partials/header %>
     <div class="container fade">
-        <div class="row">
+        <div class="row media-content">
             <div class="five columns">
-              <div class="content">
                 <p class="title"><%=data['projName']%>.</p>
                 <p class="sub-1-title">
                   <span class="under-line">Timeline:</span> <span class="sub-2-title"><%=data['timeline']%></span>
@@ -14,10 +13,8 @@
                   <span class="under-line">Website:</span> <span class="sub-2-title"><a href="<%=data['website']%>"><%=data['projName']%></a></span>
                 </p>
                 
-              </div>
             </div>  
             <div class="seven columns">
-              <div class="content">
                 <p class="sub-1-title">Background</p>
                 <p class="sub-3-title">
                   <%=data['background']%>
@@ -31,7 +28,6 @@
                   <%=data['future']%>
                 </p>
               </div>
-            </div>
         </div>
     </div>
   <% include ./partials/footer %>

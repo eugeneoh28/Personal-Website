@@ -41,7 +41,7 @@ hr {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    font-size: 2.5rem;
+    font-size: 2.8rem;
 }
 
 .navbar-brand {
@@ -104,13 +104,19 @@ hr {
 	color:grey;
 }
 
-
-
 .content {
 	color:grey;
-	margin-top:10rem;
-	padding-left:2rem;
+	margin-top:9rem;
+	padding-left:1rem;
 }
+
+.media-content {
+	color:grey;
+	margin-top:9rem;
+	padding-left:1rem;
+	padding-right: 1rem;
+}
+
 @media (max-width: 425px) {
 	.content {
 		margin: 6rem 1rem;
@@ -122,7 +128,7 @@ hr {
 }
 
 .title {
-	font-size:5rem;
+	font-size:6rem;
 	margin-bottom: 0;
 }
 
@@ -161,7 +167,9 @@ hr {
 }
 
 .box {
-	margin:10rem 10rem;
+	margin-top:9rem;
+	margin-left:11rem;
+
 	height:70%;
 	width:80%;
 }
@@ -204,7 +212,7 @@ hr {
 
 .projects {
 	margin:0 0.6rem;
-	height:37rem;
+	height:29vw;
 	align-content: center;
 	overflow:auto;
 }
@@ -241,6 +249,18 @@ hr {
 	}
 }
 
+.image_wrap:hover .image_desc {
+  visibility: visible;
+  opacity: 1;
+}
+
+.image_desc {
+	text-align: center;
+	visibility: hidden;
+	opacity:0;
+	transition: opacity .2s, visibility .2s;
+}
+
 .circular-image {
   position: relative;
   width: 28rem;
@@ -265,6 +285,7 @@ hr {
 
 #workimg {
 	width:70%;
+	margin-right: 30%;
 }
 
 @media (max-width: 425px) {
@@ -280,5 +301,5 @@ hr {
 	}
 }
 #homeimgdiv {
-	margin-top:8rem;
+	margin-top:7rem;
 }
